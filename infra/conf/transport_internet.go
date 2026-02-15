@@ -1092,7 +1092,7 @@ func (p TransportProtocol) Build() (string, error) {
 		return "", errors.PrintRemovedFeatureError("HTTP transport (without header padding, etc.)", "XHTTP stream-one H2 & H3")
 	case "quic":
 		return "", errors.PrintRemovedFeatureError("QUIC transport (without web service, etc.)", "XHTTP stream-one H3")
-	case "hysteria":
+	case "hysteria", "hysteria2":
 		return "hysteria", nil
 	default:
 		return "", errors.New("Config: unknown transport protocol: ", p)
